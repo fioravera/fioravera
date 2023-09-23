@@ -7,18 +7,18 @@ on:
       - 'main'
 
 jobs:
-  Update-README:
+  Update-profile:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Update
         run: |
-          echo "[![${date}](https://github.com/fioravera/fioravera/actions/workflows/README.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/README.yml)" > README.md
+          echo "[![${{date}}](https://github.com/fioravera/fioravera/actions/workflows/README.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/README.yml)" > README.md
       - name: Commit
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Profile update"
+          git commit -m "Update README.md"
           git push origin main
