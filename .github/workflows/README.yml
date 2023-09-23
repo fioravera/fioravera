@@ -1,4 +1,4 @@
-name: "README"
+name: "Profile update"
 on:
   schedule:
     - cron: '*/23 * * * *'
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Update README.md
+      - name: Update README
         run: |
           echo "[![README](https://github.com/fioravera/fioravera/actions/workflows/README.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/README.yml)
           
@@ -23,5 +23,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "update"
+          git commit -m "Profile update"
           git push origin main
