@@ -15,7 +15,7 @@ jobs:
       - name: update README
         run: |
           echo "[![Cronjob](https://github.com/fioravera/fioravera/actions/workflows/update-readme.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/update-readme.yml)" > README.md
-          echo "${{ date }}" >> README.md
+          echo date >> README.md
       - name: commit
         run: |
           git config user.name github-actions
