@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Update README
         run: |
-          echo "[![${date}](https://github.com/fioravera/fioravera/actions/workflows/README.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/README.yml)" > README.md README.md
+          echo "[![$(date)](https://github.com/fioravera/fioravera/actions/workflows/README.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/README.yml)" > README.md
       - name: Commit
         run: |
           git config user.name github-actions
