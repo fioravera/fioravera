@@ -1,4 +1,4 @@
-name: "Update"
+name: "README"
 on:
   schedule:
     - cron: '*/23 * * * *'
@@ -7,14 +7,16 @@ on:
       - 'main'
 
 jobs:
-  readme-update:
+  update:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Update README.md
         run: |
-          echo "[![Cronjob](https://github.com/fioravera/fioravera/actions/workflows/readme.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/readme.yml)" > README.md
+          echo "[![README](https://github.com/fioravera/fioravera/actions/workflows/README.yml/badge.svg)](https://github.com/fioravera/fioravera/actions/workflows/README.yml)
+          
+          " > README.md
           date >> README.md
       - name: Commit
         run: |
